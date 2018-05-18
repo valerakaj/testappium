@@ -1,4 +1,5 @@
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
 import org.junit.Before;
@@ -28,17 +29,22 @@ public class testCulture {
 
     @Test
     public void sampleTest() {
-        MobileElement el1 = (MobileElement) driver.findElementById("org.wikipedia:id/fragment_onboarding_skip_button");
+        MobileElement el1 = (MobileElement) driver.findElementById("ru.fabit.culture:id/action_schedule");
         el1.click();
-
-        MobileElement el2 = (MobileElement) driver.findElementsById("org.wikipedia:id/view_announcement_action_negative");
+        MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Поиск");
         el2.click();
+        MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Поиск");
+        el2.click();
+        MobileElement el3 = (MobileElement) driver.findElementById("ru.fabit.culture:id/et_search_query");
+        el3.sendKeys("qwe");
+
 
     }
 
 
-        @After
-        public void tearDown() {
+
+    @After
+    public void tearDown() {
         driver.quit();
     }
 
