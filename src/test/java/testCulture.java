@@ -33,8 +33,6 @@ public class testCulture {
         el1.click();
         MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Поиск");
         el2.click();
-        MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Поиск");
-        el2.click();
         MobileElement el3 = (MobileElement) driver.findElementById("ru.fabit.culture:id/et_search_query");
         el3.sendKeys("qwe");
 
